@@ -1,39 +1,73 @@
 
-require.config({
-    paths:  {
-        domReady:   "../node_modules/respec/js/domReady"
-    ,   core:       "../node_modules/respec/js/core/"
-    ,   text:       "../node_modules/respec/js/text"
-    ,   tmpl:       "../node_modules/respec/js/tmpl"
-    ,   handlebars: "../node_modules/respec/js/handlebars"
+/*global respecVersion */
+
+// this is only set in a build, not at all in the dev environment
+var requireConfig = {
+    shim:   {
+        "shortcut": {
+            exports:    "shortcut"
+        }
+    },
+    paths: {
+      domReady:   "../node_modules/respec/js/domReady",
+      core:       "../node_modules/respec/js/core/",
+      text:       "../node_modules/respec/js/text",
+      tmpl:       "../node_modules/respec/js/tmpl",
+      handlebars: "../node_modules/respec/js/handlebars",
+      shortcut:   "../node_modules/respec/js/shortcut",
+      webidl2:    "../node_modules/respec/js/webidl2",
+      w3c:        "../node_modules/respec/js/w3c"
     }
-});
+};
+if ("respecVersion" in window && respecVersion) {
+    requireConfig.paths = {
+        "ui":   "https://w3c.github.io/respec/js/ui"
+    };
+}
+require.config(requireConfig);
+
 
 define([
-            "domReady"
-        ,   "core/base-runner"
-        ,   "core/override-configuration"
-        ,   "core/default-root-attr"
-        ,   "oma/style"
-        ,   "oma/boilerplate"
-        ,   "core/data-include"
-        ,   "core/inlines"
-        ,   "core/examples"
-        ,   "core/issues-notes"
-        ,   "core/highlight"
-        ,   "core/fix-headers"
-        ,   "core/structure"
-        ,   "core/section-refs"
-        ,   "core/id-headers"
-        ,   "oma/container"
-        ,   "core/remove-respec"
-        ,   "core/location-hash"
+  "domReady",
+  "core/base-runner",
+  "core/ui",
+  "core/override-configuration",
+  "core/default-root-attr",
+  "core/markdown",
+  "core/style",
+  "core/data-transform",
+  "core/data-include",
+  "core/inlines",
+  "core/dfn",
+  "w3c/rfc2119",
+  "core/examples",
+  "core/issues-notes",
+  "core/requirements",
+  "core/highlight",
+  "core/best-practices",
+  "core/figures",
+  "core/biblio",
+  "core/webidl-contiguous",
+  "core/webidl-oldschool",
+  "core/link-to-dfn",
+  "core/fix-headers",
+  "core/structure",
+  "core/id-headers",
+  "core/rdfa",
+  "core/shiv",
+  "core/remove-respec",
+  "core/location-hash",
+  "oma/container",
+  //"oma/boilerplate",
+  "oma/headers",
+  "oma/style"
         ],
-        function (domReady, runner) {
-            var args = Array.prototype.slice.call(arguments)
-            ,   hasRun = false;
+        function (domReady, runner, ui) {
+            var args = Array.prototype.slice.call(arguments);
             domReady(function () {
-                hasRun = true;
+                ui.addCommand("Save Snapshot", "ui/save-html", "Ctrl+Shift+Alt+S");
+                ui.addCommand("About ReSpec", "ui/about-respec", "Ctrl+Shift+Alt+A");
+                ui.addCommand("Search Specref DB", "ui/search-specref", "Ctrl+Shift+Alt+space");
                 runner.runAll(args);
             });
         }

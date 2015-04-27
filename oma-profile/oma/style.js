@@ -1,15 +1,16 @@
 
-// Module beryl/style
-// Add the stylesheet
-
+// Module oma/style
 define(
-    ["core/utils"],
-    function (utils) {
+    ["text!oma/css/oma.css"],
+    function (css) {
         return {
             run:    function (conf, doc, cb, msg) {
-                msg.pub("start", "beryl/style");
-                utils.linkCSS(doc, "css/beryl.css");
-                msg.pub("end", "beryl/style");
+                msg.pub("start", "oma/style");
+                if (!conf.noReSpecCSS) {
+                    $("<style/>").appendTo($("head", $(doc)))
+                                 .text(css);
+                }
+                msg.pub("end", "oma/style");
                 cb();
             }
         };
