@@ -48,7 +48,7 @@ function build (options, cb) {
 exports.build = build;
 
 build({
-  out: "build/respec-oma-common.js"
+  out: "builds/respec-oma-common.js"
 }, function () {
     console.log("DONE");
 });
