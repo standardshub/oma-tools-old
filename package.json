@@ -1,14 +1,16 @@
 {
-	"name":     "oma-tools",
-	"version":  "0.0.1",
-	"private":  true,
-	"license": "",
-	"dependencies": {
-		"respec":         "3.2.41",
-		"async":          "0.2.9",
-		"wrench":         "1.5.1",
-		"gulp-watch":     "4.2.1",
-		"gulp-requirejs": "0.1.3",
-		"gulp-sass":      "1.3.3"
-    }
+  "name": "oma-tools",
+  "version": "0.0.1",
+  "private": true,
+  "license": "",
+  "dependencies": {
+    "async": "0.2.9",
+    "gulp-requirejs": "0.1.3",
+    "gulp-sass": "1.3.3",
+    "gulp-watch": "4.2.1",
+    "htmltidy": "0.0.6",
+    "js-beautify": "^1.5.5",
+    "respec": "3.2.41",
+    "wrench": "1.5.1"
+  }
 }

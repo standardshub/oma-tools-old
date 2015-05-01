@@ -28,39 +28,82 @@ require.config(requireConfig);
 
 
 define([
-  "domReady",
-  "core/base-runner",
-  "core/ui",
-  "core/override-configuration",
-  "core/default-root-attr",
-  "core/markdown",
-  "core/style",
-  "core/data-transform",
-  "core/data-include",
-  "core/inlines",
-  "core/dfn",
-  "w3c/rfc2119",
-  "core/examples",
-  "core/issues-notes",
-  "core/requirements",
-  "core/highlight",
-  "core/best-practices",
-  "core/figures",
-  "core/biblio",
-  "core/webidl-contiguous",
-  "core/webidl-oldschool",
-  "core/link-to-dfn",
-  "core/fix-headers",
-  "core/structure",
-  "core/id-headers",
-  "core/rdfa",
-  "core/shiv",
-  "core/remove-respec",
-  "core/location-hash",
-  "oma/container",
-  //"oma/boilerplate",
-  "oma/headers",
-  "oma/style"
+
+  "domReady"
+,   "core/base-runner"
+,   "core/ui"
+,   "core/override-configuration"
+,   "core/default-root-attr"
+,   "core/markdown"
+,   "core/style"
+//,   "w3c/style"
+,   "oma/style"
+,   "core/data-transform"
+,   "core/data-include"
+,   "core/inlines"
+,   "core/dfn"
+,   "core/examples"
+,   "core/issues-notes"
+,   "core/requirements"
+,   "core/highlight"
+,   "core/best-practices"
+,   "core/figures"
+,   "core/biblio"
+,   "core/webidl-contiguous"
+,   "core/webidl-oldschool"
+,   "core/link-to-dfn"
+,   "core/fix-headers"
+,   "core/structure"
+
+,   "core/id-headers"
+,   "core/rdfa"
+,   "core/shiv"
+,   "core/remove-respec"
+,   "core/location-hash"
+,   "oma/container"
+
+,   "oma/headers"
+
+  /*
+
+
+
+
+  "domReady"
+,   "core/base-runner"
+,   "core/ui"
+,   "core/override-configuration"
+,   "core/default-root-attr"
+,   "core/markdown"
+,   "core/style"
+,   "core/data-transform"
+,   "core/data-include"
+,   "core/inlines"
+,   "core/dfn"
+,   "w3c/rfc2119"
+,   "core/examples"
+,   "core/issues-notes"
+,   "core/requirements"
+,   "core/highlight"
+,   "core/best-practices"
+,   "core/figures"
+,   "core/biblio"
+,   "core/webidl-contiguous"
+,   "core/webidl-oldschool"
+,   "core/link-to-dfn"
+,   "core/fix-headers"
+,   "core/structure"
+,   "w3c/informative"
+,   "w3c/permalinks"
+,   "core/id-headers"
+,   "core/rdfa"
+,   "w3c/aria"
+,   "core/shiv"
+,   "core/remove-respec"
+,   "core/location-hash"
+,   "oma/headers"
+,   "oma/container"
+,   "oma/style" */
         ],
         function (domReady, runner, ui) {
             var args = Array.prototype.slice.call(arguments);

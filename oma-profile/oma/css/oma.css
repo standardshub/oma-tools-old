@@ -1,5 +1,5 @@
 body {
-  padding: 2em 1em 2em 1em;
+  padding: 2em 2em 2em 4em;
   margin: 0;
   font-family: sans-serif;
   color: black;
@@ -8,6 +8,13 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
+body.CANDIDATE { background-image: url(https://openmobilealliance.github.io/Tools/assets/logo-CANDIDATE.png); }
+body.APPROVED { background-image: url(https://openmobilealliance.github.io/Tools/assets/logo-APPROVED.png); }
+body.DRAFT { background-image: url(https://openmobilealliance.github.io/Tools/assets/draft.png); }
+body.HISTORIC { background-image: url(https://openmobilealliance.github.io/Tools/assets/logo-HISTORIC.png); }
+
+
 :link { color: #00C; background: transparent }
 :visited { color: #609; background: transparent }
 a:active { color: #C00; background: transparent }
@@ -26,9 +33,9 @@ th, td { /* ns 4 */
 h1, h2, h3, h4, h5, h6 { text-align: left }
 /* background should be transparent, but WebTV has a bug */
 h1, h2, h3 { color: #005A9C; background: white }
-h1 { font: 170% sans-serif }
+h1 { font: 180% sans-serif }
 h2 { font: 140% sans-serif }
-h3 { font: 120% sans-serif }
+h3 { font: 130% sans-serif }
 h4 { font: bold 100% sans-serif }
 h5 { font: italic 100% sans-serif }
 h6 { font: small-caps 100% sans-serif }
@@ -36,7 +43,7 @@ h6 { font: small-caps 100% sans-serif }
 .hide { display: none }
 
 div.head { margin-bottom: 1em }
-div.head h1 { margin-top: 2em; clear: both }
+div.head h1 { clear: both }
 div.head table { margin-left: 2em; margin-top: 2em }
 
 p.copyright { font-size: small }
@@ -69,7 +76,7 @@ ul.toc, ol.toc {
  *****************************************************************/
 
 /* --- INLINES --- */
-em.rfc2119 { 
+em.rfc2119 {
     text-transform:     lowercase;
     font-variant:       small-caps;
     font-style:         normal;
@@ -194,7 +201,7 @@ div.example-title {
     color: #b9ab2d;
 }
 div.example-title span {
-    text-transform: uppercase;   
+    text-transform: uppercase;
 }
 aside.example, div.example, div.illegal-example {
     padding: 0.5em;
@@ -209,7 +216,7 @@ aside.example, div.example {
     border-left-width: .5em;
     border-left-style: solid;
     border-color: #e0cb52;
-    background: #fcfaee;    
+    background: #fcfaee;
 }
 
 aside.example div.example {
@@ -221,4 +228,6 @@ aside.example div.example div.example-title {
     color: #999;
 }
 
-
+#logo {
+  float: right;
+}
