@@ -239,7 +239,7 @@ define(
                 conf.isTagFinding = conf.specStatus === "finding" || conf.specStatus === "draft-finding";
                 if (!conf.edDraftURI) {
                     conf.edDraftURI = "";
-                    if (conf.specStatus === "ED") msg.pub("warn", "Editor's Drafts should set edDraftURI.");
+                  //  if (conf.specStatus === "ED") msg.pub("warn", "Editor's Drafts should set edDraftURI.");
                 }
                 conf.maturity = (this.status2maturity[conf.specStatus]) ? this.status2maturity[conf.specStatus] : conf.specStatus;
                 var publishSpace = "TR";
@@ -257,7 +257,7 @@ define(
                 }
                 if (conf.previousPublishDate) {
                     if (!conf.previousMaturity && !conf.isTagFinding)
-                        msg.pub("error", "previousPublishDate is set, but not previousMaturity");
+                        //msg.pub("error", "previousPublishDate is set, but not previousMaturity");
                     if (!(conf.previousPublishDate instanceof Date))
                         conf.previousPublishDate = utils.parseSimpleDate(conf.previousPublishDate);
                     var pmat = (this.status2maturity[conf.previousMaturity]) ? this.status2maturity[conf.previousMaturity] :
@@ -278,7 +278,7 @@ define(
                 }
                 else {
                     if (!/NOTE$/.test(conf.specStatus) && conf.specStatus !== "FPWD" && conf.specStatus !== "FPLC" && conf.specStatus !== "ED" && !conf.noRecTrack && !conf.isNoTrack)
-                        msg.pub("error", "Document on track but no previous version.");
+                    //    msg.pub("error", "Document on track but no previous version.");
                     if (!conf.prevVersion) conf.prevVersion = "";
                 }
                 if (conf.prevRecShortname && !conf.prevRecURI) conf.prevRecURI = "http://www.w3.org/TR/" + conf.prevRecShortname;
@@ -329,7 +329,7 @@ define(
                 conf.notYetRec = (conf.isRecTrack && conf.specStatus !== "REC");
                 conf.isRec = (conf.isRecTrack && conf.specStatus === "REC");
                 if (conf.isRec && !conf.errata)
-                    msg.pub("error", "Recommendations must have an errata link.");
+                  //msg.pub("error", "Recommendations must have an errata link.");
                 conf.notRec = (conf.specStatus !== "REC");
                 conf.isUnofficial = conf.specStatus === "unofficial";
                 conf.prependW3C = !conf.isUnofficial;
@@ -368,7 +368,7 @@ define(
                 // handle SotD
                 var $sotd = $("#sotd");
                 if ((conf.isCGBG || !conf.isNoTrack || conf.isTagFinding) && !$sotd.length)
-                    msg.pub("error", "A custom SotD paragraph is required for your type of document.");
+                  //  msg.pub("error", "A custom SotD paragraph is required for your type of document.");
                 conf.sotdCustomParagraph = $sotd.html();
                 $sotd.remove();
                 // NOTE:
@@ -411,17 +411,17 @@ define(
 
                 conf.recNotExpected = (!conf.isRecTrack && conf.maturity == "WD" && conf.specStatus !== "FPWD-NOTE");
                 if (conf.isIGNote && !conf.charterDisclosureURI)
-                    msg.pub("error", "IG-NOTEs must link to charter's disclosure section using charterDisclosureURI");
+                  //  msg.pub("error", "IG-NOTEs must link to charter's disclosure section using charterDisclosureURI");
                 // ensure subjectPrefix is encoded before using template
                 if (conf.subjectPrefix !== '') conf.subjectPrefixEnc = encodeURIComponent(conf.subjectPrefix);
 
 
                 if (!conf.implementationReportURI && (conf.isCR || conf.isPR || conf.isRec)) {
-                    msg.pub("error", "CR, PR, and REC documents need to have an implementationReportURI defined.");
+                  //  msg.pub("error", "CR, PR, and REC documents need to have an implementationReportURI defined.");
                 }
                 if (conf.isTagFinding && !conf.sotdCustomParagraph) {
-                    msg.pub("error", "ReSpec does not support automated SotD generation for TAG findings, " +
-                                     "please specify one using a <code><section></code> element with ID=sotd.");
+                  //  msg.pub("error", "ReSpec does not support automated SotD generation for TAG findings, " +
+                  //                   "please specify one using a <code><section></code> element with ID=sotd.");
                 }
 
                 msg.pub("end", "oma/headers");
