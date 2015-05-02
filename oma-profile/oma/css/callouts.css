@@ -1,0 +1,32 @@
+/* --- CALLOUTS --- */
+div.callout-title {
+    min-width: 7.5em;
+    color: #b9ab2d;
+}
+div.callout-title span {
+    text-transform: uppercase;
+}
+aside.callout, div.callout, div.illegal-callout {
+    padding: 0.5em;
+    margin: 1em 0;
+    position: relative;
+    clear: both;
+}
+div.illegal-callout { color: red }
+div.illegal-callout p { color: black }
+aside.callout, div.callout {
+    padding: .5em;
+    border-left-width: .5em;
+    border-left-style: solid;
+    border-color: #e0cb52;
+    background: #fcfaee;
+}
+
+aside.callout div.callout {
+    border-left-width: .1em;
+    border-color: #999;
+    background: #fff;
+}
+aside.callout div.callout div.callout-title {
+    color: #999;
+}

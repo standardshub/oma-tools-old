@@ -63,6 +63,7 @@ define([
 ,   "oma/container"
 
 ,   "oma/headers"
+,   "oma/legal"
 
   /*
 

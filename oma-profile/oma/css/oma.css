@@ -231,3 +231,7 @@ aside.example div.example div.example-title {
 #logo {
   float: right;
 }
+
+figure  {
+  text-align: center;
+}

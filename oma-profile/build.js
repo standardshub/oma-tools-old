@@ -3,11 +3,13 @@
 var fs   = require("fs")
 ,   pth  = require("path")
 ,   r    = require("requirejs")
+,   version = JSON.parse(fs.readFileSync(pth.join(__dirname, "../package.json"), "utf-8")).version
+,   versioned = pth.join("./", "respec-w3c-common-" + version + ".js")
 ;
 
 function build (options, cb) {
     var config = {
-        baseUrl:    pth.join(__dirname, "./oma-profile")
+        baseUrl:    pth.join(__dirname, "./")
     ,   optimize:   options.optimize || "uglify2"
     ,   paths:  {
             requireLib: "../node_modules/requirejs/require",
