@@ -88,6 +88,10 @@ h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, a abbr {
     border: none;
 }
 
+abbr {
+  border-bottom: 1px dashed #ccc;
+}
+
 dfn {
     font-weight:    bold;
 }
@@ -234,4 +238,8 @@ aside.example div.example div.example-title {
 
 figure  {
   text-align: center;
+}
+
+strong.highlight {
+  background: yellow;
 }
