@@ -60,6 +60,7 @@ define([
 ,   "core/location-hash"
 ,   "oma/container"
 ,   "oma/headers"
+,   "oma/links"
         ],
         function (domReady, runner, ui) {
             var args = Array.prototype.slice.call(arguments);
