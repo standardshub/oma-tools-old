@@ -18,7 +18,7 @@ define(
                 $("body").addClass(conf.specStatus);
 
                 $(".web-content").wrapInner("<div class=\"content-inner\"></div>");
-                $(".code-content").wrapInner("<code class=\"highlight\"></code>");
+                $(".code-content").wrapInner("<pre class=\"highlight\"></pre>");
 
                 $(".web-content").each(function(index, elem) {
                     $elem = $(elem);
