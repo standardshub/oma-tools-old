@@ -243,3 +243,42 @@ figure  {
 strong.highlight {
   background: yellow;
 }
+
+
+/* --- CUSTOM CONTENT --- */
+aside.web-content, aside.code-content {
+  padding: .5em;
+  margin: 1em 0;
+}
+aside.web-content {
+  border-left: .5em solid #5596E6;
+  background: #C0E6FF;
+}
+
+.code-content-title, .web-content-title {
+  text-transform: uppercase;
+}
+
+.code-content-title { color: #777677; } /* light gray */
+.web-content-title { color: #4178BE; } /* light blue */
+
+aside.code-content {
+  border-left: .5em solid #C7C7C7;
+  background: #E0E0E0;
+}
+
+.content-inner {
+    margin-left: 12px;
+}
+
+.code-content > code {
+  margin: 12px;
+}
+
+.web-content > .content-inner {
+    background: #E0E0E0;
+    border: 1px solid #959595;
+    margin: 1em 0;
+    border-radius: .25em;
+    padding: 6px;
+}
