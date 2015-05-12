@@ -5,14 +5,14 @@ general tools used to aid in the development of specifications
 
 **Load development OMA Profile**
 ```html
-<script src='node_modules/requirejs/require.js' data-main='oma-profile/oma' async
-  class='remove'></script>
+<script src="node_modules/requirejs/require.js" data-main="oma-profile/oma" async
+  class="remove"></script>
 ```
 
 **Load latest OMA Profile build**
 ```html
 <script src="builds/respec-oma-common.js"
-  async class='remove'></script>
+  async class="remove"></script>
 ```
 
 **Load public OMA Profile latest build**
@@ -23,6 +23,6 @@ general tools used to aid in the development of specifications
 
 **Latest W3C Respec**
 ```html
-<script src='http://www.w3.org/Tools/respec/respec-w3c-common'
-  async class='remove'></script>
+<script src="http://www.w3.org/Tools/respec/respec-w3c-common"
+  async class="remove"></script>
 ```
