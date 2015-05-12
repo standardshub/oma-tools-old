@@ -255,22 +255,23 @@ aside.web-content, aside.code-content {
   padding: .5em;
   margin: 1em 0;
 }
+
+.code-content-title, .web-content-title {
+  text-transform: uppercase;
+}
+
+aside.code-content {
+  border-left: .5em solid #AF6EE8;
+  background: #EED2FF;
+}
+
 aside.web-content {
   border-left: .5em solid #5596E6;
   background: #C0E6FF;
 }
 
-.code-content-title, .web-content-title {
-  text-transform: uppercase;
-}
-aside.code-content {
-  border-left: .5em solid #AF6EE8;
-  background: #EED2FF;  /* 10 */
-}
-
-
-.code-content-title { color: #9855D4; } /* light gray */
-.web-content-title { color: #4178BE; } /* light blue */
+.code-content-title { color: #9855D4; }
+.web-content-title { color: #4178BE; }
 
 .content-inner {
     margin-left: 12px;
