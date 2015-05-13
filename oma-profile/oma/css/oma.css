@@ -243,3 +243,48 @@ figure  {
 strong.highlight {
   background: yellow;
 }
+
+
+/* --- CUSTOM CONTENT --- */
+/*
+  background: 10
+  border: 40
+  title: 50
+*/
+aside.web-content, aside.code-content {
+  padding: .5em;
+  margin: 1em 0;
+}
+
+.code-content-title, .web-content-title {
+  text-transform: uppercase;
+}
+
+aside.code-content {
+  border-left: .5em solid #AF6EE8;
+  background: #EED2FF;
+}
+
+aside.web-content {
+  border-left: .5em solid #5596E6;
+  background: #C0E6FF;
+}
+
+.code-content-title { color: #9855D4; }
+.web-content-title { color: #4178BE; }
+
+.content-inner {
+    margin-left: 12px;
+}
+
+.code-content > code {
+  margin: 12px;
+}
+
+.web-content > .content-inner {
+    background: #E0E0E0;
+    border: 1px solid #959595;
+    margin: 1em 0;
+    border-radius: .25em;
+    padding: 6px;
+}
