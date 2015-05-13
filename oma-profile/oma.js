@@ -61,6 +61,7 @@ define([
 ,   "oma/container"
 ,   "oma/headers"
 ,   "oma/links"
+,   "oma/tables"
         ],
         function (domReady, runner, ui) {
             var args = Array.prototype.slice.call(arguments);
