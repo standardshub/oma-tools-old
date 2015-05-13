@@ -121,15 +121,15 @@ code {
 }
 
 /* --- TOC --- */
-.toc a, .tof a {
+.toc a, .tof a, .tot a {
     text-decoration:    none;
 }
 
-a .secno, a .figno {
+a .secno, a .figno, a.tableno {
     color:  #000;
 }
 
-ul.tof, ol.tof {
+ul.tof, ol.tof, ul.tot {
     list-style: none outside none;
 }
 
@@ -142,7 +142,13 @@ ul.tof, ol.tof {
 table {
     border-spacing: 0;
     border-collapse:    collapse;
-    border-bottom:  3px solid #005a9c;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+table > caption {
+    caption-side: bottom;
+    margin-top: 3px;
 }
 
 thead > tr > td {
@@ -150,12 +156,9 @@ thead > tr > td {
 }
 
 thead > tr {
-  border-bottom:  3px solid #005a9c;
 }
 
 th {
-    background: #005a9c;
-    color:  #fff;
     padding:    3px 5px;
     text-align: left;
 }
@@ -168,11 +171,8 @@ th[scope="row"] {
 
 td {
     padding:    3px 10px;
-    border-top: 1px solid #ddd;
-}
-
-tr:nth-child(even) {
-    background: #f0f6ff;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
 }
 
 /* --- DL --- */
