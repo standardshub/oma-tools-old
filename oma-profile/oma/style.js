@@ -11,12 +11,25 @@ define(
                                  .text(css);
                 }
 
-
                 // core/highlight expects there to be a link tag to append
                 // highlight specific css to.
                 $("<link />").appendTo("head");
-                
+
                 $("body").addClass(conf.specStatus);
+
+                $(".web-content").wrapInner("<div class=\"content-inner\"></div>");
+                $(".code-content").wrapInner("<pre class=\"highlight\"></pre>");
+
+                $(".web-content").each(function(index, elem) {
+                    $elem = $(elem);
+                    $elem.prepend("<div class=\"web-content-title\">Web Content</div>");
+                });
+
+                $(".code-content").each(function(index, elem) {
+                    $elem = $(elem);
+                    $elem.prepend("<div class=\"code-content-title\">Code Content</div>");
+                });
+
                 msg.pub("end", "oma/style");
                 cb();
             }
