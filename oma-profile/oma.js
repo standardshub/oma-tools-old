@@ -47,6 +47,7 @@ define([
 ,   "core/highlight"
 ,   "core/best-practices"
 ,   "core/figures"
+,   "oma/biblio" // must be included before core/biblio
 ,   "core/biblio"
 ,   "core/webidl-contiguous"
 ,   "core/webidl-oldschool"
