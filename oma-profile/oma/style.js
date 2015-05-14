@@ -11,6 +11,9 @@ define(
                                  .text(css);
                 }
 
+                // don't add an index to the tof
+                $("#tof").addClass("introductory");
+
                 // core/highlight expects there to be a link tag to append
                 // highlight specific css to.
                 $("<link />").appendTo("head");
