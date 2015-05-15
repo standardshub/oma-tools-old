@@ -20,9 +20,11 @@ var requireConfig = {
       w3c:        "../node_modules/respec/js/w3c"
     }
 };
-if ("respecVersion" in window && respecVersion) {
+
+if ("omaRespecVersion" in window && omaRespecVersion) {
     requireConfig.paths = {
-        "ui":   "https://w3c.github.io/respec/js/ui"
+        "ui":   "https://w3c.github.io/respec/js/ui",
+        "oma/ui": "https://openmobilealliance.github.io/Tools/oma-profile/oma/ui"
     };
 }
 require.config(requireConfig);
