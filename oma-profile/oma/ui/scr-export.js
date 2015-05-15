@@ -5,7 +5,7 @@ define(
     function ($) {
         return {
             show:   function (ui, conf) {
-                var $export = "",
+                var $export = "[",
                     $pars = $(".container").find("p");
                 
                 this.terms = Object.getOwnPropertyNames(conf.respecRFC2119).sort();
@@ -18,10 +18,10 @@ define(
                         if($.inArray(word.toUpperCase(), this.terms) > 0) {
 
                             var header = $(this.paragraph.parentElement).find(":header");
-                            var paragraph = this.paragraph;                            
+                            var paragraph = encodeURIComponent(this.paragraph.textContent);
                             
                             $export += "['" + header.text() + "',";
-                            $export += "'"+ paragraph.textContent  + "'],\n";
+                            $export += "'"+ paragraph  + "'],\n";
                             
                             var kw = [header, paragraph];
                             this.keywords.push(kw);
@@ -31,6 +31,7 @@ define(
 
                 // remove trailing newline and comma
                 $export = $export.slice(0,-2);
+                $export += "]";
 
                 var $exp = $("<textarea id=\"scrExport\" style='width: 100%;height: 350px;'>" + $export + "</textarea>");
                 ui.freshModal("SCR Export", $exp);
