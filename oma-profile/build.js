@@ -50,7 +50,7 @@ function build (options, cb) {
 exports.build = build;
 
 build({
-  out: "builds/respec-oma-common.js"
+  out: "builds/respec-oma-common-WIP.js"
 }, function () {
     console.log("DONE");
 });
