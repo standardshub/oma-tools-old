@@ -24,6 +24,7 @@ general tools used to aid in the development of specifications
 ```
 
 **Load public OMA Profile latest WIP build**
+
 This should be used for all documents under current development.
 ```html
 <script src="https://openmobilealliance.github.io/Tools/builds/respec-oma-common-WIP.js"
