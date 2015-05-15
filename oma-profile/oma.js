@@ -10,7 +10,8 @@ var requireConfig = {
     },
     paths: {
       domReady:   "../node_modules/respec/js/domReady",
-      core:       "../node_modules/respec/js/core/",
+        core:       "../node_modules/respec/js/core/",
+        ui: "../node_modules/respec/js/ui",
       text:       "../node_modules/respec/js/text",
       tmpl:       "../node_modules/respec/js/tmpl",
       handlebars: "../node_modules/respec/js/handlebars",
@@ -33,7 +34,7 @@ define([
 ,   "core/base-runner"
 ,   "core/ui"
 ,   "oma/style"
-, "w3c/permalinks"
+,   "w3c/permalinks"
 ,   "core/override-configuration"
 ,   "core/default-root-attr"
 ,   "core/markdown"
@@ -70,6 +71,8 @@ define([
             domReady(function () {
                 ui.addCommand("Save Snapshot", "ui/save-html", "Ctrl+Shift+Alt+S");
                 ui.addCommand("About ReSpec", "ui/about-respec", "Ctrl+Shift+Alt+A");
+                ui.addCommand("About OMA", "oma/ui/about-oma", "");
+                ui.addCommand("Export SCR Data", "oma/ui/scr-export", "");
                 ui.addCommand("Search Specref DB", "ui/search-specref", "Ctrl+Shift+Alt+space");
                 runner.runAll(args);
             });
