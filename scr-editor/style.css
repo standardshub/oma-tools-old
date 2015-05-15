@@ -1,0 +1,15 @@
+/* style.css */
+
+.data {
+    width: 85%;
+    height: 150px;
+    font-size: 12px;
+}
+
+dt {
+    font-weight: 900;
+}
+
+heading {
+    border-bottom: 2px solid blue;
+}
