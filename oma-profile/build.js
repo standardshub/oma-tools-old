@@ -3,7 +3,7 @@
 var fs   = require("fs")
 ,   pth  = require("path")
 ,   r    = require("requirejs")
-,   version = JSON.parse(fs.readFileSync(pth.join(__dirname, "../package.json"), "utf-8")).version
+,   version = JSON.parse(fs.readFileSync(pth.join(__dirname, "package.json"), "utf-8")).version
 ,   versioned = pth.join("./", "respec-w3c-common-" + version + ".js")
 ;
 
@@ -38,7 +38,9 @@ function build (options, cb) {
         // add header
         try {
             fs.writeFileSync(config.out,
-                            fs.readFileSync(config.out, "utf8") + "\nrequire(['oma']);\n");
+                             "/* OMA Respec Profile */" +
+                             "omaRespecVersion = '" + version + "';" +
+                             fs.readFileSync(config.out, "utf8") + "\nrequire(['oma']);\n");
         }
         catch (e) {
             console.log("ERROR", e);
